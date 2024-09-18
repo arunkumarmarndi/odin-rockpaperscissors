@@ -5,13 +5,11 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
-
 // Step 2: Function to get the human player's choice
 function getHumanChoice() {
     const choice = prompt("Please enter your choice (rock, paper, or scissors):").toLowerCase();
     return choice;
 }
-
 
 // Step 3: Declare the player's score variables
 let humanScore = 0;
@@ -43,3 +41,9 @@ function playRound(humanChoice, computerChoice) {
     document.getElementById("computerScore").textContent = `Computer: ${computerScore}`;
 }
 
+// Function to start the game and play rounds
+function startGame() {
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    playRound(humanChoice, computerChoice);
+}
